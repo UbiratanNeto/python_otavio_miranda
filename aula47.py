@@ -22,12 +22,14 @@ while True:
     if letra_digitada in palavra_secreta:
         letras_acertadas += letra_digitada
 
-    palavra_formada = '*'
+    palavra_formada = ''
     for letra_secreta in palavra_secreta:
         if letra_secreta in letras_acertadas:
             palavra_formada += letra_secreta
         else:
             palavra_formada += '*'
+
+    print('Palavra formada:', palavra_formada)
 
     if palavra_formada == palavra_secreta:
         print('Você ganhou, parabéns!')
